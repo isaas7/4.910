@@ -13,6 +13,55 @@ Welcome to Compilator, a C++ compiler project! Compilator is designed to compile
 ## Project Overview
 
 Compilator is a C++ compiler that aims to provide correctness, efficiency, and compatibility with a wide range of C++ language features. The project is divided into several components, including the Lexer, Parser, Semantic Analyzer, and Code Generator.
+```
+compiler/
+|-- src/                   # Source code for your compiler
+|   |-- lexer/             # Lexical analysis components
+|   |   |-- lexer.cpp
+|   |   |-- lexer.h
+|   |-- parser/            # Syntax analysis and parsing
+|   |   |-- parser.cpp
+|   |   |-- parser.h
+|   |-- semantic/          # Semantic analysis components
+|   |   |-- semantic.cpp
+|   |   |-- semantic.h
+|   |-- intermediate/      # Intermediate representation generation
+|   |   |-- ir.cpp
+|   |   |-- ir.h
+|   |-- optimization/      # Optimization passes
+|   |   |-- optimizer.cpp
+|   |   |-- optimizer.h
+|   |-- codegen/           # Code generation for target architecture
+|   |   |-- codegen.cpp
+|   |   |-- codegen.h
+|   |-- main.cpp           # Main entry point for your compiler
+|
+|-- include/               # Header files for your compiler
+|   |-- lexer.h
+|   |-- parser.h
+|   |-- semantic.h
+|   |-- ir.h
+|   |-- optimizer.h
+|   |-- codegen.h
+|
+|-- tests/                 # Test suite for your compiler
+|   |-- test_lexical.cpp
+|   |-- test_parser.cpp
+|   |-- test_semantic.cpp
+|   |-- test_ir.cpp
+|   |-- test_optimizer.cpp
+|   |-- test_codegen.cpp
+|
+|-- examples/              # Example source code in your language
+|   |-- example1.yourlang
+|   |-- example2.yourlang
+|
+|-- docs/                  # Documentation for your compiler
+|
+|-- CMakeLists.txt         # Build configuration using CMake (or Makefile)
+|-- README.md              # Project README
+|-- LICENSE                # License file
+```
 
 - **Lexer:** The lexical analyzer responsible for tokenizing the source code. [Learn more](docs/lexer/overview.md).
 
