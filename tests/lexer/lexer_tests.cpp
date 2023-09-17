@@ -21,15 +21,19 @@ TEST(LexerTests, TokenizeSimpleCode) {
 //     ASSERT_EQ(tokens[3].type, TokenType::INTEGER);
 // }
 
-// TEST(LexerTests, TokenizeWithWhitespace) {
-//     Lexer lexer("  int  x   =  42  ;  ");
-//     std::vector<Token> tokens = lexer.tokenize();
-//     ASSERT_EQ(tokens.size(), 4);
-//     // Ensure no whitespace tokens are generated
-//     for (const auto& token : tokens) {
-//         ASSERT_NE(token.type, TokenType::WHITESPACE);
-//     }
-// }
+TEST(LexerTests, TokenizeWithWhitespace) {
+    Lexer lexer("  int  x   =  42  ;  ");
+    std::vector<Token> tokens = lexer.tokenize();
+    std::cout << "Actual tokens:\n";
+    for (const Token& token : tokens) {
+        std::cout << "Type: " << static_cast<int>(token.type) << ", Lexeme: " << token.lexeme << "\n";
+    }
+    ASSERT_EQ(tokens.size(), 4);
+    // Ensure no whitespace tokens are generated
+    for (const auto& token : tokens) {
+        ASSERT_NE(token.type, TokenType::WHITESPACE);
+    }
+}
 
 // TEST(LexerTests, TokenizeInvalidInput) {
 //     Lexer lexer("@$%&");
