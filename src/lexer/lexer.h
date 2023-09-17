@@ -12,6 +12,7 @@ enum class TokenType {
     SEMICOLON,
     END_OF_FILE,
     INVALID,
+    WHITESPACE,
     // ...
 };
 
