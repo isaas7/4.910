@@ -22,6 +22,10 @@ std::vector<Token> Lexer::tokenize() {
 Token Lexer::scanToken() {
     char c = advance();
 
+    while (c == ' ' || c == '\t' || c == '\n' || c == '\r') {
+        c = advance();
+    }
+
     switch(c) {
         case '+':
             return Token(TokenType::PLUS, "+");
