@@ -4,7 +4,7 @@ Lexer::Lexer(const std::string& sourceCode) : source(sourceCode) {
 }
 
 std::vector<Token> Lexer::tokenize() {
-    while(!isAtEnd) {
+    while(!isAtEnd()) {
         start = current;
 
         Token token = scanToken();
