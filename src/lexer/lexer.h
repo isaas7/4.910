@@ -10,6 +10,7 @@ enum class TokenType {
     PLUS, 
     MINUS,
     SEMICOLON,
+    END_OF_FILE,
     // ...
 };
 
