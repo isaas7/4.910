@@ -20,15 +20,24 @@ std::vector<Token> Lexer::tokenize() {
 }
 
 Token Lexer::scanToken() {
-    char c = advance();
+    // Skip leading whitespace
+    while (current < source.length() && (source[current] == ' ' || source[current] == '\t' || source[current] == '\n' || source[current] == '\r')) {
+        current++;
+    }
+
+    if (isAtEnd()) {
+        return Token(TokenType::END_OF_FILE, "");
+    }
+
+    char c = source[current++];
 
     switch(c) {
         case '+':
             return Token(TokenType::PLUS, "+");
         case '-':
-            return Token(TokenType::PLUS, "+");
+            return Token(TokenType::MINUS, "-");
         case ';':
-            return Token(TokenType::PLUS, "+");
+            return Token(TokenType::SEMICOLON, ";");
         default:
             if(isalpha(c)) {
                 return scanIdentifier();
@@ -40,6 +49,7 @@ Token Lexer::scanToken() {
             }
     }
 }
+
 
 Token Lexer::scanIdentifier() {
     while(isalnum(peek())) {
