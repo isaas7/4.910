@@ -11,6 +11,7 @@ enum class TokenType {
     MINUS,
     SEMICOLON,
     END_OF_FILE,
+    INVALID,
     // ...
 };
 
@@ -28,6 +29,7 @@ public:
 private:
     Token scanToken();
     Token scanIdentifier();
+    Token scanNumber();
     char advance();
     char peek();
     bool isAtEnd();
