@@ -24,6 +24,11 @@ All notable changes to the "Compilator - A C++ Compiler" project will be documen
   - Defined token types and implemented tokenization logic.
   - Introduced the `Lexer` class with a `tokenize` method.
 
+- **Test Suite:**
+  - Created a test suite in the `tests/` directory.
+  - Implemented `lexer_tests.cpp` to test the lexer component.
+  - Added test cases to ensure correct tokenization.
+
 - **Project Overview README:**
   - Created a README.md file with a project overview and links to component documentation.
   - Detailed the project structure.
