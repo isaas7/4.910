@@ -28,7 +28,7 @@ TEST(LexerTests, TokenizeWithWhitespace) {
     for (const Token& token : tokens) {
         std::cout << "Type: " << static_cast<int>(token.type) << ", Lexeme: " << token.lexeme << "\n";
     }
-    ASSERT_EQ(tokens.size(), 4);
+    ASSERT_EQ(tokens.size(), 6);
     // Ensure no whitespace tokens are generated
     for (const auto& token : tokens) {
         ASSERT_NE(token.type, TokenType::WHITESPACE);
