@@ -15,7 +15,7 @@ Welcome to Compilator, a C++ compiler project! Compilator is designed to compile
 Compilator is a C++ compiler that aims to provide correctness, efficiency, and compatibility with a wide range of C++ language features. The project is divided into several components, including the Lexer, Parser, Semantic Analyzer, and Code Generator.
 ```
 compiler/
-|-- src/                   # Source code for your compiler
+|-- src/                   # Source code for compiler
 |   |-- lexer/             # Lexical analysis components
 |   |   |-- lexer.cpp
 |   |   |-- lexer.h
@@ -34,9 +34,9 @@ compiler/
 |   |-- codegen/           # Code generation for target architecture
 |   |   |-- codegen.cpp
 |   |   |-- codegen.h
-|   |-- main.cpp           # Main entry point for your compiler
+|   |-- main.cpp           # Main entry point for compiler
 |
-|-- include/               # Header files for your compiler
+|-- include/               # Header files for compiler
 |   |-- lexer.h
 |   |-- parser.h
 |   |-- semantic.h
@@ -44,7 +44,7 @@ compiler/
 |   |-- optimizer.h
 |   |-- codegen.h
 |
-|-- tests/                 # Test suite for your compiler
+|-- tests/                 # Test suite for compiler
 |   |-- test_lexical.cpp
 |   |-- test_parser.cpp
 |   |-- test_semantic.cpp
@@ -52,11 +52,11 @@ compiler/
 |   |-- test_optimizer.cpp
 |   |-- test_codegen.cpp
 |
-|-- examples/              # Example source code in your language
+|-- examples/              # Example source code in language
 |   |-- example1.yourlang
 |   |-- example2.yourlang
 |
-|-- docs/                  # Documentation for your compiler
+|-- docs/                  # Documentation for compiler
 |
 |-- CMakeLists.txt         # Build configuration using CMake (or Makefile)
 |-- README.md              # Project README
