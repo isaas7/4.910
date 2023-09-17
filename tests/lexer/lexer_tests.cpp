@@ -4,10 +4,6 @@
 TEST(LexerTests, TokenizeSimpleCode) {
     Lexer lexer("int main() { return 0; }");
     std::vector<Token> tokens = lexer.tokenize();
-    std::cout << "Actual tokens:\n";
-    for (const Token& token : tokens) {
-        std::cout << "Type: " << static_cast<int>(token.type) << ", Lexeme: " << token.lexeme << "\n";
-    }
     ASSERT_EQ(tokens.size(), 10);
 }
 
@@ -24,10 +20,6 @@ TEST(LexerTests, TokenizeSimpleCode) {
 TEST(LexerTests, TokenizeWithWhitespace) {
     Lexer lexer("  int  x   =  42  ;  ");
     std::vector<Token> tokens = lexer.tokenize();
-    std::cout << "Actual tokens:\n";
-    for (const Token& token : tokens) {
-        std::cout << "Type: " << static_cast<int>(token.type) << ", Lexeme: " << token.lexeme << "\n";
-    }
     ASSERT_EQ(tokens.size(), 6);
     // Ensure no whitespace tokens are generated
     for (const auto& token : tokens) {
