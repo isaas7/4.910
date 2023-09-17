@@ -2,6 +2,18 @@
 
 All notable changes to the "Compilator - A C++ Compiler" project will be documented in this file.
 
+## [0.0.2] - 2023-09-17
+
+### Added
+
+- **Lexer Component Updates:**
+  - Modified the `scanToken` method in `lexer.cpp` to handle whitespace more effectively.
+  - Added new test cases in `lexer_tests.cpp` to ensure correct tokenization, including handling of whitespace.
+  - Updated the lexer component documentation in `docs/lexer/overview.md`.
+
+### Test Suite
+- Enhanced the test suite in the `tests/` directory to cover recent changes and ensure robust testing.
+
 ## [0.0.1] - 2023-09-17
 
 ### Added
