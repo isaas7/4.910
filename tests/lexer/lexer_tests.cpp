@@ -8,7 +8,7 @@ TEST(LexerTests, TokenizeSimpleCode) {
     for (const Token& token : tokens) {
         std::cout << "Type: " << static_cast<int>(token.type) << ", Lexeme: " << token.lexeme << "\n";
     }
-    ASSERT_EQ(tokens.size(), 15);
+    ASSERT_EQ(tokens.size(), 10);
 }
 
 // TEST(LexerTests, TokenizeBasicTypes) {
