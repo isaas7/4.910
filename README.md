@@ -32,6 +32,8 @@ Comprehensive documentation is available to help you understand and work with Co
 - [Parser Documentation](docs/parser/overview.md): Discover how the Parser processes source code.
 - [Semantic Analyzer Documentation](docs/semantic/overview.md): Explore semantic analysis in Compilator.
 - [Code Generator Documentation](docs/codegen/overview.md): Understand code generation for the target architecture.
+- [Changelog](CHANGELOG.md): View the project's changelog to see a history of changes and updates.
+
 
 For more information, including how to contribute to the documentation, see the [Documentation README](docs/README.md).
 
