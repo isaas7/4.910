@@ -29,6 +29,57 @@ The C++ Compiler consists of several key components, each responsible for specif
 
 6. **Code Generator:** The code generator generates target code (e.g., assembly or machine code) from the intermediate representation. It aims to produce efficient and correct code for the target architecture.
 
+```
+compiler/
+|-- src/                   # Source code for compiler
+|   |-- lexer/             # Lexical analysis components
+|   |   |-- lexer.cpp
+|   |   |-- lexer.h
+|   |-- parser/            # Syntax analysis and parsing
+|   |   |-- parser.cpp
+|   |   |-- parser.h
+|   |-- semantic/          # Semantic analysis components
+|   |   |-- semantic.cpp
+|   |   |-- semantic.h
+|   |-- intermediate/      # Intermediate representation generation
+|   |   |-- ir.cpp
+|   |   |-- ir.h
+|   |-- optimization/      # Optimization passes
+|   |   |-- optimizer.cpp
+|   |   |-- optimizer.h
+|   |-- codegen/           # Code generation for target architecture
+|   |   |-- codegen.cpp
+|   |   |-- codegen.h
+|   |-- main.cpp           # Main entry point for compiler
+|
+|-- include/               # Header files for compiler
+|   |-- lexer.h
+|   |-- parser.h
+|   |-- semantic.h
+|   |-- ir.h
+|   |-- optimizer.h
+|   |-- codegen.h
+|
+|-- tests/                 # Test suite for compiler
+|   |-- test_lexical.cpp
+|   |-- test_parser.cpp
+|   |-- test_semantic.cpp
+|   |-- test_ir.cpp
+|   |-- test_optimizer.cpp
+|   |-- test_codegen.cpp
+|
+|-- examples/              # Example source code in language
+|   |-- example1.yourlang
+|   |-- example2.yourlang
+|
+|-- docs/                  # Documentation for compiler
+|
+|-- CMakeLists.txt         # Build configuration using CMake (or Makefile)
+|-- README.md              # Project README
+|-- LICENSE                # License file
+```
+
+
 ## How to Use the Compiler
 
 If you're interested in using the C++ Compiler, refer to the [Usage Guide](usage.md) for instructions on setting up, compiling, and running C++ programs using this compiler.
