@@ -27,6 +27,7 @@ public:
     std::vector<Token> tokenize();
 private:
     Token scanToken();
+    Token scanIdentifier();
     char advance();
     char peek();
     bool isAtEnd();
