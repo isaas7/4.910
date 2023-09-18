@@ -17,6 +17,7 @@ target_include_directories(compilator PRIVATE src)
 # Add a test executable for running unit tests
 add_executable(tests
     tests/lexer/lexer_tests.cpp
+    tests/parser/parser_tests.cpp
     src/lexer/lexer.cpp
     # Add more test files for other components as needed
 )
