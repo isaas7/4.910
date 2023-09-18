@@ -10,6 +10,8 @@ enum class TokenType {
     INTEGER,
     PLUS, 
     MINUS,
+    STAR,
+    SLASH,
     SEMICOLON,
     END_OF_FILE,
     ERROR,

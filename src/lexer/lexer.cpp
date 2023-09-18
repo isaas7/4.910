@@ -36,6 +36,10 @@ Token Lexer::scanToken() {
             return Token(TokenType::PLUS, "+");
         case '-':
             return Token(TokenType::MINUS, "-");
+        case '*':
+            return Token(TokenType::STAR, "*");
+        case '/':
+            return Token(TokenType::SLASH, "/");
         case ';':
             return Token(TokenType::SEMICOLON, ";");
         case '=':
