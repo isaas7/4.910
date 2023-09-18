@@ -11,8 +11,13 @@ enum class TokenType {
     MINUS,
     SEMICOLON,
     END_OF_FILE,
-    INVALID,
+    ERROR,
     WHITESPACE,
+    EQUAL,
+    LEFT_PAREN,   // Add token type for left parenthesis
+    RIGHT_PAREN,  // Add token type for right parenthesis
+    LEFT_BRACE,   // Add token type for left brace {
+    RIGHT_BRACE,  // Add token type for right brace }
     // ...
 };
 
