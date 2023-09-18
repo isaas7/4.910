@@ -18,7 +18,9 @@ target_include_directories(compilator PRIVATE src)
 add_executable(tests
     tests/lexer/lexer_tests.cpp
     tests/parser/parser_tests.cpp
+    tests/parser/ast_tests.cpp
     src/lexer/lexer.cpp
+    src/parser/ast.cpp
     # Add more test files for other components as needed
 )
 
