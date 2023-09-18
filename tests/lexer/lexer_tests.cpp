@@ -33,3 +33,14 @@ TEST(LexerTests, TokenizeInvalidInput) {
         std::vector<Token> tokens = lexer.tokenize();
     }, std::runtime_error);
 }
+/* additional lexer test cases */
+TEST(LexerTests, MultiplicativeOperators) {
+    Lexer lexer("int result = x * y - z / 2;");
+    std::vector<Token> tokens = lexer.tokenize();
+    ASSERT_EQ(tokens.size(), 12);
+}
+
+TEST(LexerTests, CppKeywords) {
+    Lexer lexer("if (condition) { return 42; }");
+    std::vector<Token> tokens = lexer.tokenize();
+}
