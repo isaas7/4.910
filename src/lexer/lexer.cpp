@@ -38,16 +38,29 @@ Token Lexer::scanToken() {
             return Token(TokenType::MINUS, "-");
         case ';':
             return Token(TokenType::SEMICOLON, ";");
+        case '=':
+            return Token(TokenType::EQUAL, "=");
+        case '(':
+            return Token(TokenType::LEFT_PAREN, "(");
+        case ')':
+            return Token(TokenType::RIGHT_PAREN, ")");
+        case '{':
+            return Token(TokenType::LEFT_BRACE, "{");  // Recognize left brace
+        case '}':
+            return Token(TokenType::RIGHT_BRACE, "}"); // Recognize right brace
         default:
             if(isalpha(c)) {
                 return scanIdentifier();
             } else if (isdigit(c)) {
                 return scanNumber();
             } else {
+                current++;
+                return scanToken();
                 // Handle unrecognized character or errors
-                return Token(TokenType::INVALID, std::string(1, c));
+                //return Token(TokenType::ERROR, std::string(1, c));
             }
     }
+
 }
 
 
