@@ -54,10 +54,7 @@ Token Lexer::scanToken() {
             } else if (isdigit(c)) {
                 return scanNumber();
             } else {
-                current++;
-                return scanToken();
-                // Handle unrecognized character or errors
-                //return Token(TokenType::ERROR, std::string(1, c));
+                throw std::runtime_error("Lexer Error: Unrecognized character '" + std::string(1, c) + "'");
             }
     }
 
