@@ -28,8 +28,8 @@ TEST(LexerTests, TokenizeWithWhitespace) {
 }
 
 TEST(LexerTests, TokenizeInvalidInput) {
-    Lexer lexer("@$%&");
-    std::vector<Token> tokens = lexer.tokenize();
-    // Ensure that no valid tokens are generated for invalid input
-    ASSERT_EQ(tokens.size(), 1);
+    EXPECT_THROW({
+        Lexer lexer("@$%&");
+        std::vector<Token> tokens = lexer.tokenize();
+    }, std::runtime_error);
 }
