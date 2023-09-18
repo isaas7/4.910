@@ -10,15 +10,20 @@ enum class TokenType {
     INTEGER,
     PLUS, 
     MINUS,
+    STAR,
+    SLASH,
     SEMICOLON,
     END_OF_FILE,
     ERROR,
     WHITESPACE,
     EQUAL,
-    LEFT_PAREN,   // Add token type for left parenthesis
-    RIGHT_PAREN,  // Add token type for right parenthesis
-    LEFT_BRACE,   // Add token type for left brace {
-    RIGHT_BRACE,  // Add token type for right brace }
+    LEFT_PAREN,
+    RIGHT_PAREN,
+    LEFT_BRACE,
+    RIGHT_BRACE, 
+    DOUBLE_COLON,
+    STRING,
+    CHARACTER,
     // ...
 };
 
@@ -37,9 +42,12 @@ private:
     Token scanToken();
     Token scanIdentifier();
     Token scanNumber();
+    Token scanString();
+    Token scanCharacterLiteral();
     char advance();
     char peek();
     bool isAtEnd();
+    bool isComment();
 
     std::string source;
     std::vector<Token> tokens;
