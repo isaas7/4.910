@@ -61,12 +61,12 @@ compiler/
 |   |-- codegen.h
 |
 |-- tests/                 # Test suite for compiler
-|   |-- test_lexical.cpp
-|   |-- test_parser.cpp
-|   |-- test_semantic.cpp
-|   |-- test_ir.cpp
-|   |-- test_optimizer.cpp
-|   |-- test_codegen.cpp
+|   |-- lexer_tests.cpp
+|   |-- parser_tests.cpp
+|   |-- semantic_tests.cpp
+|   |-- ir_tests.cpp
+|   |-- optimizer_tests.cpp
+|   |-- codegen_tests.cpp
 |
 |-- examples/              # Example source code in language
 |   |-- example1.yourlang
