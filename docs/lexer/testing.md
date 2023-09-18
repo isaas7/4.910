@@ -98,10 +98,10 @@ This test case examines the Lexer's behavior when provided with invalid input, s
 ###
 ```cpp
 TEST(LexerTests, TokenizeInvalidInput) {
-    Lexer lexer("@$%&");
-    std::vector<Token> tokens = lexer.tokenize();
-    // Ensure that no valid tokens are generated for invalid input
-    ASSERT_EQ(tokens.size(), 1);
+    EXPECT_THROW({
+        Lexer lexer("@$%&");
+        std::vector<Token> tokens = lexer.tokenize();
+    }, std::runtime_error);
 }
 ```
 These test cases, in combination with additional test cases that can be added, ensure the correctness and robustness of the Lexer component, helping maintain the quality of the Compilator C++ Compiler.
