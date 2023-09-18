@@ -26,9 +26,13 @@ The lexer recognizes various token types, which are represented using the `enum 
 - `IDENTIFIER`: Represents user-defined names like variable names and function names.
 - `INTEGER`: Represents integer literals.
 - `PLUS`, `MINUS`, `SEMICOLON`: Represents specific operators and punctuation.
+- `EQUAL`: Represents the equality operator (e.g., `=`).
 - `END_OF_FILE`: Indicates the end of the input source code.
-
-Additional token types can be added as needed to support the language being compiled.
+- `LEFT_PAREN`: Represents a left parenthesis, `(`.
+- `RIGHT_PAREN`: Represents a right parenthesis, `)`.
+- `LEFT_BRACE`: Represents a left brace, `{`.
+- `RIGHT_BRACE`: Represents a right brace, `}`.
+- (Additional token types can be added as needed to support the language being compiled.)
 
 ## Lexer Class
 
