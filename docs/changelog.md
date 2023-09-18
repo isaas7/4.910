@@ -1,6 +1,8 @@
 # Changelog
 
 All notable changes to the "Compilator - A C++ Compiler" project will be documented in this file.
+## [0.0.21] - 2023-09-18
+
 
 ## [0.0.2] - 2023-09-17
 
