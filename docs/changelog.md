@@ -9,6 +9,7 @@ All notable changes to the "Compilator - A C++ Compiler" project will be documen
 - **Lexer Component Updates:**
   - Modified the `scanToken` method in `lexer.cpp` to handle whitespace more effectively.
   - Added new test cases in `lexer_tests.cpp` to ensure correct tokenization, including handling of whitespace.
+  - Added `runtime_error` to `scanToken` and updated test fixture to pass with `EXPECT_THROW`
   - Updated the lexer component documentation in `docs/lexer/overview.md`.
 
 ### Test Suite
