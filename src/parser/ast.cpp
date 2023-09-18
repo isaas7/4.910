@@ -10,7 +10,11 @@ NodeType ASTNode::getType() const {
 }
 
 VariableDeclarationNode::VariableDeclarationNode(const std::string& identifier, int value)
-    : ASTNode(NodeType::VariableDeclaration), identifier(identifier), value(value) {}
+    : ASTNode(NodeType::VariableDeclaration), identifier(identifier), value(value) {
+    if (identifier.empty()) {
+        throw std::runtime_error("VariableDeclarationNode Error: Identifier cannot be empty");
+    }
+}
 
 void VariableDeclarationNode::print(int indent) const {
     for (int i = 0; i < indent; i++) {
@@ -28,7 +32,11 @@ const std::string& VariableDeclarationNode::getIdentifier() const {
 }
 
 AssignmentNode::AssignmentNode(const std::string& identifier, ASTNode* expression)
-    : ASTNode(NodeType::Assignment), identifier(identifier), expression(expression) {}
+    : ASTNode(NodeType::Assignment), identifier(identifier), expression(expression) {
+    if (identifier.empty() || expression == nullptr) {
+            throw std::runtime_error("AssignmentNode Error: Identifier or Expression cannot be empty or nullptr");
+    }
+}
 
 AssignmentNode::~AssignmentNode() {
     delete expression;
